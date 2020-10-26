@@ -1,4 +1,4 @@
-# Register OAuth App 
+# Register OAuth App
 ##  Google 
     https://developers.google.com/adwords/api/docs/guides/authentication
 ## Github 
@@ -9,3 +9,5 @@
 -- update client_id in SetProvider method (oauth-providers.component.ts)
 - oAuthTokenValidation
 -- Inside TokenValidator Controller method (TokenValidatorController.cs)
+
+Tested and Comiled on Compiled on VS 2019
