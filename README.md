@@ -10,4 +10,4 @@
 - oAuthTokenValidation
 -- Inside TokenValidator Controller method (TokenValidatorController.cs)
 
-Tested and Comiled on Compiled on VS 2019
+Tested and Comiled   on VS 2019
