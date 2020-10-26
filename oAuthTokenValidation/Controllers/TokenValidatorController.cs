@@ -29,8 +29,8 @@ namespace oAuthTokenValidation.Controllers
                 keyValues.Add(new KeyValuePair<string, string>("code", token));
                 keyValues.Add(new KeyValuePair<string, string>("redirect_uri", "http://localhost:4200/oauth?provider=google"));
 
-                keyValues.Add(new KeyValuePair<string, string>("client_id", "633622781734-9dtbahaafjtkt3ai50d9i47dgj47kljh.apps.googleusercontent.com"));
-                keyValues.Add(new KeyValuePair<string, string>("client_secret", "hYB-CGQR2B0HPhVJyc5PgI2H"));
+                keyValues.Add(new KeyValuePair<string, string>("client_id", "<Client id>"));
+                keyValues.Add(new KeyValuePair<string, string>("client_secret", "<client secret>"));
                 keyValues.Add(new KeyValuePair<string, string>("scope", "openid email profile"));
                 keyValues.Add(new KeyValuePair<string, string>("grant_type", "authorization_code"));
 
@@ -52,7 +52,7 @@ namespace oAuthTokenValidation.Controllers
                 var client = new HttpClient();
 
                 UriBuilder builder = new UriBuilder("https://github.com/login/oauth/access_token");
-                builder.Query = "redirect_uri=http://localhost:4200/oauth&client_id=10f4d8c6134a1a0419f5&client_secret=37c404c3f47134b43936308a874c3e6655eacd5f&state=testing&code=" + token;
+                builder.Query = "redirect_uri=http://localhost:4200/oauth&client_id=<clientid>&client_secret=<clientscret>&state=testing&code=" + token;
 
                 var response = client.GetStringAsync(builder.Uri).Result;
                 if (response.Contains("access_token"))
